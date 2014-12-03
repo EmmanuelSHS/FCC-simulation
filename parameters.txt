@@ -1,0 +1,15 @@
+# Begin of the line
+nx 3
+ny 3
+nz 3
+sigma 1
+epsilon 1
+rcut 2.5
+tau 1000
+ifreq 10
+nstep 1000
+m 1
+d 1.5
+t0 100
+dt 0.0005
+# End of the line
