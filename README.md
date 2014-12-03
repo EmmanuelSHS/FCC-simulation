@@ -8,3 +8,4 @@ Till this version, this simulation program serve as the mean of simulating:
 1. Simulate the FCC crystal viberation in real world.
 2. The interactive force is determined according to Lennard-Jones Potential
 3. The adjustment of the force is given by Longevin thermal condition
+4. Use a customized parameter file, parameters.txt to customize the parameters needed for calculation.
