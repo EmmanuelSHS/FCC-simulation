@@ -20,11 +20,11 @@ The realization of FCC simulation is made up of several parts:
 
 2. atomcfg.xyz: The output of the position of each atom at each time step, which can be used for further study, such as visualization in vmd.
 
-3. log.dat: The thermal information for each time step, such as potential energy, knetic nenery and temperature.
+3. log.dat: The thermal information for each time step, such as potential energy, knetic enery and temperature.
 
-4. memory.h & memory.cpp
+4. memory.h & memory.cpp: The class for creating high dimension array.
 
-5. random.h & random.cpp
+5. random.h & random.cpp: The class for creating random number with different distributions.
 
 6. ThreeD.h & ThreeD.cpp
 
