@@ -26,7 +26,7 @@ The realization of FCC simulation is made up of several parts:
 
 5. random.h & random.cpp: The class for creating random number with different distributions.
 
-6. ThreeD.h & ThreeD.cpp
+6. ThreeD.h & ThreeD.cpp: The class for initializing a FCC crystal, simluating its movements according to Lennard-Jones Potential and ouputing the result in standardlized .xyz and .dat files.
 
 7. main.cpp
 
