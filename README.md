@@ -30,4 +30,4 @@ The realization of FCC simulation is made up of several parts:
 
 7. main.cpp
 
-8. parameters.txt:
+8. parameters.txt: The file enablint customized data input.
