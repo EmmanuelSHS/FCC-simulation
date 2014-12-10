@@ -28,6 +28,6 @@ The realization of FCC simulation is made up of several parts:
 
 6. ThreeD.h & ThreeD.cpp: The class for initializing a FCC crystal, simluating its movements according to Lennard-Jones Potential and ouputing the result in standardlized .xyz and .dat files.
 
-7. main.cpp
+7. main.cpp: The main function that realizing the simulation.
 
 8. parameters.txt: The file enablint customized data input.
