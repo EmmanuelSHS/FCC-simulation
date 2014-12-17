@@ -3,11 +3,16 @@ FCC-simulation
 
 This repository contains fundamental simulation program of FCC crystal under hypothesis of Lennard-Jones Potential and Longevin thermal condition in Molecular Dynamics.
 
-Update log
+Update long 20141217
+bug fixed for pair.cpp
+
+==============
+Update log 20141216
+new feature add to this program: calculating the radius distribution function.
 
 ==============
 Update log 20141203
-Till this version, this simulation program serve as the mean of simulating:
+Till this version, this simulation program serves as the mean of simulating:
 
 1. Simulate the FCC crystal viberation in real world.
 
