@@ -55,10 +55,10 @@ PairCF::PairCF()
 
   double LMax = double(nmax) *delr;
   if (LMax > 0.5 * L){
-    nmax = (0.5 * L / delr);
+    nmax = int(0.5 * L / delr);
   }
   // read xyz
-  readxyz();
+  if (readxyz()) return;
   compute();
   output();
 
@@ -168,7 +168,7 @@ void PairCF::output()
   FILE *fp = fopen(fout, "w");
   fprintf(fp, "# r  g(r)\n");
   for (int i = 1; i < nmax; ++i){
-    r = double(i) * r;
+    r = double(i) * delr;
     fprintf(fp, "%lg %lg \n", r, gr[i]);
   }
 
