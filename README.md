@@ -3,12 +3,16 @@ FCC-simulation
 
 This repository contains fundamental simulation program of FCC crystal under hypothesis of Lennard-Jones Potential and Longevin thermal condition in Molecular Dynamics.
 
-Update long 20141217
+Update log 20141218
+now the radius distribution function can be calculated for the whole time steps, i.e., able to calculate all the 1000 time steps.
+
+==============
+Update log 20141217
 bug fixed for pair.cpp
 
 ==============
 Update log 20141216
-new feature add to this program: calculating the radius distribution function.
+new feature add to this program: calculating one frame of atomcfg.xyz to get the radius distribution function.
 
 ==============
 Update log 20141203
