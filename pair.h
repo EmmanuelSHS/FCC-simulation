@@ -10,7 +10,7 @@ public:
 
   char *fname;
   double **x, L, *gr;
-  int *nr, nmax;
+  int *nr, nmax, nstep, ifreq;
   double delr, r;
   int natom;
 

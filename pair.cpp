@@ -45,6 +45,22 @@ PairCF::PairCF()
     if (ptr) delr = atof(ptr);
   }
 
+  nstep = 0;
+  while (nstep <= 0){
+  printf("\n Please input your # of total time step: ");
+  fgets(str, MAXLINE, stdin);
+  char *ptr = strtok(str, " \n\t\r\f");
+  if (ptr) nstep = atoi(ptr);
+  }
+
+  ifreq = 0;
+  while (ifreq <= 0){
+  printf("\n Please input your frequency of output: ");
+  fgets(str, MAXLINE, stdin);
+  char *ptr = strtok(str, " \n\t\r\f");
+  if (ptr) ifreq = atoi(ptr);
+  }
+
   nmax = 0;
   while (nmax <= 0){
     printf("\n Please input your # of bins for g(r): ");
@@ -92,13 +108,14 @@ int PairCF::readxyz()
     fclose(fp);
     return 3;
   } // to close fp before return
-
   memory -> create(x, natom, 3, "x");
 
   // comment line
   fgets(str, MAXLINE, fp);
 
   // read all the position data
+
+/*
   for (int i = 0; i < natom; ++i){
     fgets(str, MAXLINE, fp);
     ptr = strtok(str, " \n\t\r\f");
@@ -109,6 +126,42 @@ int PairCF::readxyz()
       x[i][j] = atof(ptr);
     }
   }
+*/
+  int scount = 0;
+
+  for (int k = 0; k < nstep; ++k){
+    if (k / ifreq == 0){
+      for (int i = 0; i < natom; ++i){
+        fgets(str, MAXLINE, fp);
+        ptr = strtok(str, " \n\t\r\f");
+        if (ptr == NULL) return 4;
+        for (int j = 0; j < 3; ++j){
+          ptr = strtok(NULL, " \n\t\r\f");
+          if (ptr == NULL) return 5;
+printf("%lg\n", x[i][j]);
+          x[i][j] += atof(ptr);
+        }  
+      }
+    fgets(str, MAXLINE, fp);
+    fgets(str, MAXLINE, fp);
+    ++scount;
+    }
+  }
+
+  for (int i = 0; i < natom; ++i){
+    fgets(str, MAXLINE, fp);
+    ptr = strtok(str, " \n\t\r\f");
+    if (ptr == NULL) return 4;
+    for (int j = 0; j < 3; ++j){
+      ptr = strtok(NULL, " \n\t\r\f");
+      if (ptr == NULL) return 5;
+      x[i][j] += atof(ptr);
+    }
+  }
+  ++scount;
+  
+  for (int i = 0; i < natom; ++i)
+  for (int j = 0; j < 3    ; ++j) x[i][j] /= double(scount);
 
   fclose(fp);
 
