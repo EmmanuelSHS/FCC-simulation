@@ -5,7 +5,7 @@ This repository contains fundamental simulation means and methods in Molecular D
 
 To be uploaded:
 
-The function that the output executable file is able to perform the decrease of temperature is to be added.
+The function that the executable file is able to perform the decrease of temperature is to be added.
 
 ==============
 Update log 20141218
