@@ -3,10 +3,6 @@ FCC-simulation
 
 This repository contains fundamental simulation means and methods in Molecular Dynamics, which are given as examplary programs of FCC crystal under hypothesis of Lennard-Jones Potential and Longevin thermal condition.
 
-To be uploaded:
-
-The function that the executable file is able to perform the decreasing of temperature is to be added.
-
 ==============
 Update log 20141218
 
