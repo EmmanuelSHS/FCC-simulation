@@ -23,7 +23,7 @@ new feature add to this program: calculating one frame of atomcfg.xyz to get the
 ==============
 Update log 20141203
 
-Till this version, this simulation program serves as the mean of simulating:
+This simulation program serves as the mean of simulating:
 
 1. Simulate the FCC crystal viberation in real world.
 
