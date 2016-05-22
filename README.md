@@ -1,7 +1,15 @@
-FCC-simulation
+## FCC-simulation
 ==============
 
 This repository contains fundamental simulation means and methods in Molecular Dynamics, which are given as examplary programs of FCC crystal under hypothesis of Lennard-Jones Potential and Longevin thermal condition.
+
+
+### Update Logs
+
+==============
+Update log 20160522
+
+Makefile is written.
 
 ==============
 Update log 20141218
@@ -22,6 +30,9 @@ new feature add to this program: calculating one frame of atomcfg.xyz to get the
 
 ==============
 Update log 20141203
+
+
+### Features
 
 This simulation program serves as the mean of simulating:
 
@@ -47,6 +58,23 @@ The realization of FCC simulation is made up of several parts:
 
 6. ThreeD.h & ThreeD.cpp: The class for initializing a FCC crystal, simluating its movements according to Lennard-Jones Potential and ouputing the result in standardlized .xyz and .dat files.
 
-7. main.cpp: The main function that realizing the simulation.
+7. 3dvibe_main.cpp: The main function that realizing the simulation.
 
-8. parameters.txt: The file enablint customized data input.
+8. rdf_main.cpp: The main function for caculating rdf function for simulation.
+
+9. parameters.txt: The file enablint customized data input.
+
+
+### Usage
+
+To build simulator, use:
+
+    make Makefile simulator 
+
+
+To build RDF calculator, use:
+
+    make Makefile rdf 
+
+
+Parameters can be customized in parameters.txt file.
