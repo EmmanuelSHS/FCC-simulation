@@ -46,23 +46,21 @@ This simulation program serves as the mean of simulating:
 
 The realization of FCC simulation is made up of several parts:
 
-1. a.out: The executable program that is compiled by G++;
+1. atomcfg.xyz: The output of the position of each atom at each time step, which can be used for further study, such as visualization in vmd.
 
-2. atomcfg.xyz: The output of the position of each atom at each time step, which can be used for further study, such as visualization in vmd.
+2. log.dat: The thermal information for each time step, such as potential energy, knetic enery and temperature.
 
-3. log.dat: The thermal information for each time step, such as potential energy, knetic enery and temperature.
+3. memory.h & memory.cpp: The class for creating high dimension array.
 
-4. memory.h & memory.cpp: The class for creating high dimension array.
+4. random.h & random.cpp: The class for creating random number with different distributions.
 
-5. random.h & random.cpp: The class for creating random number with different distributions.
+5. ThreeD.h & ThreeD.cpp: The class for initializing a FCC crystal, simluating its movements according to Lennard-Jones Potential and ouputing the result in standardlized .xyz and .dat files.
 
-6. ThreeD.h & ThreeD.cpp: The class for initializing a FCC crystal, simluating its movements according to Lennard-Jones Potential and ouputing the result in standardlized .xyz and .dat files.
+6. 3dvibe_main.cpp: The main function that realizing the simulation.
 
-7. 3dvibe_main.cpp: The main function that realizing the simulation.
+7. rdf_main.cpp: The main function for caculating rdf function for simulation.
 
-8. rdf_main.cpp: The main function for caculating rdf function for simulation.
-
-9. parameters.txt: The file enablint customized data input.
+8. parameters.txt: The file enablint customized data input.
 
 
 ### Usage
